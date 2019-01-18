@@ -1,0 +1,52 @@
+body {
+    width: 100%;
+    padding: 0;
+    background-color: #FFFFF6;
+}
+h1, h2 {
+    text-align: center;
+}
+
+input[type=text] {
+    display: block;
+    width: 380px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 14pt;
+}
+
+input[type=number] {
+    display: block;
+    width: 380px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 14pt;
+}
+
+input[type=file] {
+    display: block;
+    width: 380px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    width: 380px;
+    margin: 10px auto;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear {
+    clear: both;
+}
+#qr {
+    margin: 5px;
+}
+#image {
+    margin: 5px;
+}
