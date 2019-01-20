@@ -23,7 +23,7 @@ class QArt {
 
   static get DEFAULTS () {
     return {
-      size: 200,
+      size: 195,
       value: '',
       filter: 'threshold',
       version: 10,

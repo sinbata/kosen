@@ -2,36 +2,92 @@
 <html>
     <head>
         <title>QArt.js Example</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <h1>QAraasdft.js</h1>
+        <style type="text/css">
+        
+            body {
+                width: 100%;
+                padding: 0;
+                background-color: #FFFFF6;
+            }
+            h1, h2 {
+                text-align: center;
+            }
 
-        <h2>From</h2>
+            input[type=text] {
+                display: block;
+                width: 400px;
+                height: 30px;
+                margin: 0 auto;
+                font-size: 14pt;
+            }
+
+            input[type=number] {
+                display: block;
+                width: 400px;
+                height: 30px;
+                margin: 0 auto;
+                font-size: 14pt;
+            }
+
+            input[type=file] {
+                display: block;
+                width: 400px;
+                height: 30px;
+                margin: 0 auto;
+            }
+
+            label {
+                display: block;
+                width: 400px;
+                margin: 10px auto;
+            }
+
+            .group {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .clear {
+                clear: both;
+            }
+            #qr {
+                margin: 5px;
+            }
+            #image {
+                margin: 5px;
+            }
+        
+        </style>
+    </head>
+
+    <body>
+        <h1>QRと画像の合成</h1>
+
+        <h2>QR</h2>
         <label>
-            Value:
-            <textarea  id="value" type="text" rows="5" cols="60" >https://</textarea>
+            URLか文字列:
+            <textarea  id="value" type="text" rows="5" cols="55">https://</textarea>
             
         </label>
 
         <label>
-            Background Color:
+            背景色:
             <input id="bg" type="text" value="#">
         </label>
 
         <label>
-            Size:
-            <input id="size" type="number" value="200">
+            画像サイズ(n × n):
+            <input id="size" type="number" placeholder="195">
         </label>
 
         <label>
-            Version(5~40):
-            <input id="version" type="number" value="10">
+            情報量(Version) (1~40):
+            <input id="version" type="number" placeholder="10">
         </label>
 
         <label>
             Fill type:
-            <select id="filltype" name="fillType">
+            <select id="fillType" name="fillType">
                 <option>scale to fit</option>
                 <option>fill</option>
             </select>
@@ -49,7 +105,7 @@
         <div class="group">
             <div id="qr"></div>
             <div id="image">
-                <img src="./example.png" alt="a"></div>
+                <img src="./example.png" alt="aaaaa"></div>
         </div>
         <h2>To</h2>
         <div class="group">
@@ -61,13 +117,13 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>
             $(document).ready(function() {
-                var value = 'https://';
-                var filter = 'threshold';
+                var value = 'https://google.co.jp';
+                var filter = 'color';
                 var imagePath = './example.png';
                 var version = 10;
                 var imageSize = 75 + (version * 12) - 24;
                 var bg = "#C2C";
-                var size = 200;
+                var size = "175";
                 var fillType = 'scale_to_fit';
 
                 var self = this;
